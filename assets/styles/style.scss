@@ -1,0 +1,185 @@
+/*===== GOOGLE FONTS =====*/
+@import url("https://fonts.googleapis.com/css2?family=Sigmar+One&family=Work+Sans:wght@600&display=swap");
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css");
+/*===== VARIABLES CSS =====*/
+:root {
+  --header-height: 5rem;
+  --font-semi: 600;
+  /*===== Colores =====*/
+  --first-color: #dbff00;
+  --body-bg: #a62515;
+  /*===== Fuente y tipografia =====*/
+  --body-font: "Sigmar One", cursive;
+  --big-font-size: 2rem;
+  --h2-font-size: 1.25rem;
+  --normal-font-size: 0.938rem;
+  --smaller-font-size: 0.75rem;
+  /*===== Margenes =====*/
+  --mb-2: 1rem;
+  --mb-4: 2rem;
+  --mb-5: 2.5rem;
+  --mb-6: 3rem;
+  /*===== z index =====*/
+  --z-back: -10;
+  --z-fixed: 100;
+}
+
+@media screen and (min-width: 968px) {
+  :root {
+    --big-font-size: 3.5rem;
+    --h2-font-size: 2rem;
+    --normal-font-size: 1rem;
+    --smaller-font-size: 0.875rem;
+  }
+}
+/*===== BASE =====*/
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+  color: var(--first-color);
+  background: var(--body-bg);
+  overflow-x: hidden !important;
+  min-height: 100vh;
+  width: 100%;
+  position: relative;
+  height: auto;
+}
+
+h1,
+h2,
+p {
+  margin: 0;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  text-decoration: none !important;
+  transition: all 0.3s linear;
+}
+
+a:hover {
+  transform: scale(1.2) !important;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+::selection {
+  background-color: var(--first-color);
+  color: var(--second-color);
+}
+/*===== CLASS CSS ===== */
+a.buy-btn {
+  padding: 16px 32px;
+  background: #dbff00;
+  box-shadow: 0px 4px 8px rgba(9, 50, 67, 0.16);
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 140%;
+  color: #000000;
+  font-family: "Work Sans", sans-serif;
+  text-transform: capitalize;
+}
+
+header {
+  width: 100%;
+  padding-block: 15px;
+  position: absolute;
+  top: 0;
+
+  a.title {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 52px;
+    color: var(--first-color);
+  }
+  a.buy-btn {
+    padding: 16px 32px;
+    background: #dbff00;
+    box-shadow: 0px 4px 8px rgba(9, 50, 67, 0.16);
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 140%;
+    color: #000000;
+    font-family: "Work Sans", sans-serif;
+  }
+}
+
+#hero {
+  // min-height: 100vh;
+  width: 100%;
+  padding-block: 100px;
+  background: url(../images/hero-pattern.png) center center no-repeat;
+
+  background-size: cover;
+  h1.title {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 92px;
+    line-height: 151px;
+
+    @media (max-width: 800px) {
+      font-size: 72px;
+      line-height: 120%;
+    }
+  }
+  a.buy-btn:last-child {
+    background: #161b47;
+    color: #fff;
+  }
+}
+
+#tokenomics {
+  width: 100%;
+  padding-block: 50px;
+  video {
+    max-width: 100%;
+  }
+  .cd {
+    padding: 28px 92px;
+    gap: 10px;
+
+    background: #ffffff;
+    border: 4px solid #dbff00;
+    border-radius: 30px;
+    text-align: center;
+    color: #161b47;
+
+    h1 {
+      font-style: normal;
+      font-weight: 400;
+      font-size: 72px;
+      line-height: 140%;
+    }
+    h3 {
+      font-weight: 400;
+      font-size: 32px;
+      line-height: 140%;
+      color: #000;
+    }
+  }
+  .cd:last-child {
+    h1 {
+      color: #ff3d00;
+    }
+  }
+}
