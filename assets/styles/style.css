@@ -105,6 +105,14 @@ a.buy-btn {
   text-transform: capitalize;
 }
 
+a.title {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 52px;
+  color: var(--first-color);
+}
+
 header {
   width: 100%;
   padding-block: 15px;
@@ -182,4 +190,18 @@ header a.buy-btn {
 }
 #tokenomics .cd:last-child h1 {
   color: #ff3d00;
+}
+
+#swap {
+  min-height: 100vh;
+  width: 100%;
+  padding-block: 50px;
+}
+#swap iframe {
+  max-width: 100%;
+}
+
+footer {
+  width: 100%;
+  padding-block: 20px;
 }/*# sourceMappingURL=style.css.map */
